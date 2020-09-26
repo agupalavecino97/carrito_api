@@ -50,13 +50,6 @@ usuarioController.deleteUsuario = async (req, res) =>{
         });
 };
 
-function isAuthenticated (req, res, next){
-  if(req.isAuthenticated()){
-      return next();
-  }else{
-      res.status(200).send({message: 'usuario eliminado correctamente'}); 
-      
-  }
-}
+
 
 module.exports = usuarioController;

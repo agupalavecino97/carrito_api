@@ -16,7 +16,9 @@
     "express": "^4.17.1",
     "express-jwt": "^6.0.0",
     "mongoose": "^5.10.7",
-    "morgan": "^1.10.0",
-    "s": "^1.0.0"
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }

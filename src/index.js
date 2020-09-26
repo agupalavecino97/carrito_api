@@ -20,10 +20,6 @@ app.use((req, res, next)=>{
     res.header('content-type: application/json; charset=utf-8');
     next();
   });
-
-// middlewares
-
-// routes
 app.use('/api',require('./routes/router'));
 
 app.listen(app.get('port'),()=>{
