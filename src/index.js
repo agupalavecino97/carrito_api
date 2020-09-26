@@ -6,10 +6,6 @@ const app = express();
 // const { mongoose } = require('./db');
 app.set('port', process.env.PORT || 3000); // designar un puerto 
 
-app.use(morgan('dev')); // una opcion de morgan 
-app.use(bodyParser.urlencoded({extended:false}));
-app.use(bodyParser.json());  // convierte lo que trae la peticion a un objeto json
-
 
 //configurar cabeceras y CORS
 app.use((req, res, next)=>{
@@ -22,6 +18,10 @@ app.use((req, res, next)=>{
   });
 
 // middlewares
+app.use(morgan('dev')); // una opcion de morgan 
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());  // convierte lo que trae la peticion a un objeto json
+
 
 // routes
 app.use('/api',require('./routes/router'));
